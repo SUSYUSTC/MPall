@@ -17,8 +17,7 @@ hf.kernel()
 hf.mo_coeff = np.array(hf.mo_coeff)
 cisolver = fci.FCI(mol, hf.mo_coeff)
 EFCI, fci_vec = cisolver.kernel(davidson_only=False)
-print('pyscf FCI energy', EFCI - mol.energy_nuc())
-print('FCI correlation energy', EFCI - hf.e_tot)
+print('FCI energy', EFCI)
 
 
 def AO2MO_1e(O, mo_coeff):
